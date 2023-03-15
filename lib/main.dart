@@ -1,3 +1,4 @@
+import 'package:calculadora_manutencao/components/Screen.dart';
 import 'package:calculadora_manutencao/utils/calcExpression.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +37,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   String calculation = '';
-  double result = 1;
+  double result = 0;
 
   addCharacter(String text) {
     setState(()  {
@@ -44,13 +45,16 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
   calcResult() {
+    print('calculation: $calculation');
+    print('result');
+    print(calcExpression(calculation));
     setState(() {
       result = calcExpression(calculation);
     });
   }
   clearScreen() {
     setState(() {
-      calculation = '1';
+      calculation = '';
       result = 0;
     });
   }

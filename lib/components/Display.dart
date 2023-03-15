@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class Display extends StatelessWidget {
 
-  final Double text;
+  final double text;
 
   Display(this.text);
 
@@ -14,7 +14,7 @@ class Display extends StatelessWidget {
       flex: 1,
       child: Container(
         color: Color.fromRGBO(48, 48, 48, 1),
-        child: Text(text),
+        child: Text(text.toString()),
         ),
     );
   }
