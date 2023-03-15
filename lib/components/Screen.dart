@@ -10,10 +10,10 @@ Widget Screen(BuildContext context, String expression, String result) {
         border: Border.all(color: Colors.black)),
     child: Column(
       children: <Widget>[
-        Text(expression, style: TextStyle(
+        Text(expression, style: const TextStyle(
           fontSize: 16,
         ),),
-        Text(result, style: TextStyle(
+        Text(result, style: const TextStyle(
           fontSize: 32,
         ),),
       ],

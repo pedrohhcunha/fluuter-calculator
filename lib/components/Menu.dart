@@ -1,55 +1,36 @@
-
+import 'package:calculadora_manutencao/components/UserAccount.dart';
+import 'package:calculadora_manutencao/screens/Calculator.dart';
+import 'package:calculadora_manutencao/screens/Home.dart';
 import 'package:flutter/material.dart';
+import 'package:calculadora_manutencao/screens/About.dart';
 
 Widget Menu(BuildContext context){
   return Drawer(
       child: ListView(
           children: <Widget>[
-            UserAccountsDrawerHeader(
-              decoration: BoxDecoration(color: Colors.blue),
-              margin: EdgeInsets.only(bottom: 10.0),
-              currentAccountPicture: Container(
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    image: DecorationImage(
-                        fit: BoxFit.fill,
-
-                        image:
-                        NetworkImage("https://www.pngall.com/wp-content/uploads/5/Profile-PNG-File.png"))),
-              ),
-              accountName: new Container(
-                  child: Text(
-                    'Roubei o codigo',
-                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                  )),
-              accountEmail: new Container(
-                  child: Text(
-                    'pegueisempedir@git.com',
-                    style: TextStyle(color: Colors.white),
-                  )),
-            ),
+            const UserAccount(),
             ListTile(
-              title: Text("lorem"),
+              title: Text("Home"),
               onTap: (){
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => Home()),);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Home()),);
               },
             ),
             ListTile(
-              title: Text("item"),
+              title: Text("About"),
               onTap: (){
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => Calculator()),);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => About()),);
               },
             ),
             ListTile(
-              title: Text(""),
+              title: Text("Calculadora"),
               onTap: (){
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => About()),);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Calculator(context)),);
               },
             ),
           ]

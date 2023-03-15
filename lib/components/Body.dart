@@ -3,14 +3,14 @@ import 'package:calculadora_manutencao/components/Keyboard.dart';
 import 'package:calculadora_manutencao/components/Screen.dart';
 import 'package:calculadora_manutencao/utils/calcExpression.dart';
 
-class Calculator extends StatefulWidget {
-  const Calculator(BuildContext context, {super.key});
+class Body extends StatefulWidget {
+  const Body(BuildContext context, {super.key});
 
   @override
-  _CalculatorState createState() => _CalculatorState();
+  _BodyState createState() => _BodyState();
 }
 
-class _CalculatorState extends State<Calculator> {
+class _BodyState extends State<Body> {
   String calculation = '';
   double result = 0;
 

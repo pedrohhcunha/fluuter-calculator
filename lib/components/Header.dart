@@ -3,6 +3,6 @@ import 'package:flutter/material.dart';
 
 PreferredSizeWidget Header(BuildContext context) {
   return AppBar(
-    title: Text('Calculator'),
+    title: Text('Calculadora em Flutter'),
   );
 }
